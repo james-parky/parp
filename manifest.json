@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "PARP",
+  "version": "1.0",
+  "description": "Removes @media print CSS rules to enable better printing",
+  "permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["parp.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
